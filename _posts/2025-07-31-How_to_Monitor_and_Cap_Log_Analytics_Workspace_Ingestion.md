@@ -44,7 +44,7 @@ In the Azure Portal, go to your instance of Log Analytics Workspace:
 - Select **Daily Cap**.
 - Select **ON** and set the cap in **GB/day** (the minimum value is 0.023).
 
-![plot](https://github.com/fabiocannas/blog/blob/main/_posts/2025-07-31-How_to_Monitor_and_Cap_Log_Analytics_Workspace_Ingestion_Across_Your_Azure_Tenant/2025-07-31-How_to_Monitor_and_Cap_Log_Analytics_Workspace_Ingestion.png?raw=true)
+![plot](https://github.com/fabiocannas/blog/blob/main/_posts/2025-07-31-How_to_Monitor_and_Cap_Log_Analytics_Workspace_Ingestion/2025-07-31-How_to_Monitor_and_Cap_Log_Analytics_Workspace_Ingestion.png?raw=true)
 
 If you prefer to use Azure Resource Manager APIs, here is the link to Log Analytics Workspace's **Create Or Update** documentation:
 [Azure Resource Manager - Workspaces - Create Or Update](https://learn.microsoft.com/en-us/rest/api/loganalytics/workspaces/create-or-update?view=rest-loganalytics-2025-02-01)
