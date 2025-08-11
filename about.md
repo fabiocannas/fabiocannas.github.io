@@ -5,7 +5,7 @@ permalink: /about/
 ---
 ### ABOUT ME
 
-![profile_picture](https://github.com/fabiocannas/blog/blob/main/_pictures/global-azure-turin-2025-ai-gateway-demo.jpg?raw=true)
+![profile_picture](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_pictures/global-azure-turin-2025-ai-gateway-demo.jpg?raw=true)
 
 Hello there! 
 
