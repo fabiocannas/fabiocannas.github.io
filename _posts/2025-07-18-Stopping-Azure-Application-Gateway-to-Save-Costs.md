@@ -3,6 +3,7 @@ title: "Stopping Azure Application Gateway to save costs: a quick win for your A
 date: 2025-08-18
 ---
 ![Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/media/application-gateway-url-route-overview/figure1-720.png)
+
 *[What is Azure Application Gateway?](https://learn.microsoft.com/en-us/azure/application-gateway/overview)*
 
 Azure Application Gateway is a powerful load balancing service, but it can be as well one of those services that quietly accumulates costs even when you are not actively using it. If you are running development environments, proof-of-concepts, or seasonal applications, stopping your Application Gateway when it's not needed can lead to significant cost savings.
@@ -40,6 +41,8 @@ What happens when you stop the Azure Application Gateway:
 - All configurations are preserved
 
 ![plot](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_posts/2025-07-18-Stopping-Azure-Application-Gateway-to-Save-Costs/2025-07-18-Stopping-Azure-Application-Gateway-to-Save-Costs.png?raw=true)
+
+*Check Azure Application Gateway operational state in "Properties" blade.*
 
 You can restart it anytime with the same settings.
 
