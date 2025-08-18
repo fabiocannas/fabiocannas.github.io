@@ -51,7 +51,7 @@ You can restart it anytime with the same settings.
 ### Using Azure CLI
 
 ```bash
-az network application-gateway stop --ids <agw_id>
+az network application-gateway start --ids <agw_id>
 ```
 
 or
