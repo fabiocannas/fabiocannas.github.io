@@ -53,7 +53,7 @@ What happens when you stop the Azure Application Gateway:
 ### Using Azure CLI
 
 ```bash
-az network application-gateway stop --ids <agw_id>
+az network application-gateway start --ids <agw_id>
 ```
 
 or
