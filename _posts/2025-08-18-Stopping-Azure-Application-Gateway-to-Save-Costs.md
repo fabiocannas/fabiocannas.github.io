@@ -14,6 +14,8 @@ Unlike some Azure services that only charge for usage, Application Gateway has a
 ## How to Stop Azure Application Gateway
 >**The Azure Application Gateway cannot be stopped from the Azure portal, you have to use az cli/Powershell or the [REST API](https://learn.microsoft.com/en-us/rest/api/application-gateway/application-gateways/stop?view=rest-application-gateway-2024-05-01&tabs=HTTP).**
 
+>**To stop/start an Azure Application Gateway you need to be assigned with the Contributor role.**
+
 ### Using Azure CLI
 
 ```bash
@@ -37,14 +39,14 @@ Stop-AzApplicationGateway -ApplicationGateway $AppGw
 
 ## Important Considerations
 What happens when you stop the Azure Application Gateway:
-- All traffic routing through the gateway will be interrupted
-- All configurations are preserved
+- All traffic routing through the gateway will be interrupted.
+- All configurations are preserved, except for VIP, in V1 sku Azure Application Gateways only (for V2 sku, IPs are static).
+- The DNS name associated with the Azure Application Gateway does not change.
+- **PUT operations done on a stopped Azure Application Gateway will trigger a start.**
 
-![plot](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_posts/2025-07-18-Stopping-Azure-Application-Gateway-to-Save-Costs/2025-07-18-Stopping-Azure-Application-Gateway-to-Save-Costs.png?raw=true)
+![plot](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_posts/2025-08-18-Stopping-Azure-Application-Gateway-to-Save-Costs/2025-08-18-Stopping-Azure-Application-Gateway-to-Save-Costs.png?raw=true)
 
 *Check Azure Application Gateway operational state in "Properties" blade.*
-
-You can restart it anytime with the same settings.
 
 ## Restart the Azure Application Gateway when you need it
 
