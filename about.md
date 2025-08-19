@@ -28,6 +28,3 @@ I hold the following certifications:
 - Microsoft Certified Solutions Associate: Web applications
 - Microsoft Certified Solutions Associate: App Builder
 - Microsoft Certified Professional
-
-### PUBLIC SPEAKING
-[Sessionize - Fabio Cannas](https://sessionize.com/fabio-cannas)
