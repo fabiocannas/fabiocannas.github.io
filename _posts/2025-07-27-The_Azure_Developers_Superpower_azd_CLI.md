@@ -61,6 +61,7 @@ azd CLI provides best practice, developer-friendly commands that map to key stag
 ## Features
 
 ### Supported Azure compute services (host)
+
 | Azure compute service    | Feature Stage  |
 | ------------------------ | -------------- |
 | Azure App Service        | Stable         |
@@ -73,6 +74,7 @@ azd CLI provides best practice, developer-friendly commands that map to key stag
 [source - aka.ms/learn - azd CLI Supported Azure Compute Services](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/supported-languages-environments#supported-azure-compute-services-host)
 
 ### Supported languages and frameworks
+
 | Language | Feature Stage |
 | -------- | -----------   |
 | Node.js  | Stable        |
