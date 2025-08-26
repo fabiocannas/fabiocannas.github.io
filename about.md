@@ -11,6 +11,7 @@ Hello there!
 
 I am Fabio Cannas.
 I am an Azure cloud enthusiast and I work at an Italian consulting company called Alveo Expertise.
+I am one the administrators of the [Azure Meetup Casteddu](azuremeetupcasteddu.it).
 
 I’ve been participating in software development projects involving Microsoft technologies for almost a decade.
 
