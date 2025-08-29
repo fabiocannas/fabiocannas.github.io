@@ -4,7 +4,7 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "Public speaking"
+  - title: "Public Speaking"
     url: /public-speaking/
   - title: "About"
     url: /about/
