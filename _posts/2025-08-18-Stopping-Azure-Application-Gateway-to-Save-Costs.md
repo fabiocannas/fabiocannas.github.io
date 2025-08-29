@@ -1,6 +1,9 @@
 ---
-title: "Stopping Azure Application Gateway to save costs: a quick win for your Azure bill."
+title: "Stopping Azure Application Gateway to save costs: a quick win for your Azure bill"
 date: 2025-08-18
+permalink: "/2025/08/18/Stopping-Azure-Application-Gateway-to-Save-Costs.html/"
+category: [FinOps]
+tags: [Azure Application Gateway, FinOps]
 ---
 ![Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/media/application-gateway-url-route-overview/figure1-720.png)
 

@@ -1,6 +1,9 @@
 ---
 title: "App Service with Azure Files mount as local share, using private connectivity. Did you know?"
 date: 2025-08-05
+permalink: "/2025/08/05/App_Service_Mount_Azure_Files_as_Local_Share_Using_Private_Connectivity.html/"
+category: [Azure App Service, Networking]
+tags: [Azure App Service, Web App, Azure Storage Account, Azure Files, Private Link, Private endpoint, Networking]
 ---
 You are working on an Azure infrastructure that must implement private connectivity.
 

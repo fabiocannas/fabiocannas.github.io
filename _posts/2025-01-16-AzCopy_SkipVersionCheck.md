@@ -1,6 +1,9 @@
 ---
 title: "AzCopy - Skip Version Check"
-date: 2025-01-16
+date: "2025-01-16"
+permalink: "/2025/01/16/AzCopy_SkipVersionCheck.html/"
+category: [Azure Storage, azcopy]
+tags: [azcopy, Azure Storage]
 ---
 Fun fact (maybe not so funny) for azcopy users.
 Last night, a customer's automation task that uses **azcopy sync** command started triggering alerts.
