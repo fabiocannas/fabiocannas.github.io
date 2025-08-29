@@ -1,6 +1,9 @@
 ---
 title: "The Azure Developer's Superpower: azd CLI"
-date: 2025-07-27
+date: "2025-07-27"
+permalink: "2025/07/27/The_Azure_Developers_Superpower_azd_CLI.html/"
+category: [.NET Development, Azure SDK, Community, Azure Meetup Casteddu]
+tags: [azd CLI, Azure SDK, .NET Development, Meetup, Azure Meetup Casteddu, Speech, Session, Community]
 ---
 After a somewhat lengthy pause, it was time to update my blog. 
 

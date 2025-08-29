@@ -1,6 +1,9 @@
 ---
 title: "Visual Studio 2022 Professional - Unable to Sign In Error"
-date: 2025-01-24
+date: "2025-01-24"
+permalink: "/2025/01/24/VS2022_Unable_to_Sign_In_Error.html/"
+category: [.NET Development]
+tags: [.NET Development, Visual Studio, .NET]
 ---
 Today a colleague who was using Visual Studio 2022 Professional (the latest version, 17.12.4) encountered the following error when trying to log in:
 
