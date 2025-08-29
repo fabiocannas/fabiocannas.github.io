@@ -15,7 +15,7 @@ remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "it-IT"
+locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "Among the clouds" # site title that appears in the masthead
 title_separator          : "-"
