@@ -1,6 +1,8 @@
 ---
-layout: home
+layout: archive
 classes: wide
+title: Articles
+permalink: /articles/
 author_profile: true
 feature_row_1:
   - image_path: "/assets/images/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_CLI_intro_slide.jpg"
@@ -11,5 +13,8 @@ feature_row_1:
     btn_label: "Read more"
     btn_class: "btn--primary" 
 ---
-
 {% include feature_row id="feature_row_1" type="left" %}
+
+{% for post in site.posts limit: 5 %}
+  {% include archive-single.html %}
+{% endfor %}
