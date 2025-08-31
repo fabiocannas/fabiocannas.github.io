@@ -7,6 +7,7 @@ tags: [Azure App Service, Web App, Azure Storage Account, Azure Files, Private L
 toc: true
 toc_label: "App Service with Azure Files mount as local share, using private connectivity. Did you know?"
 toc_icon: "book"
+toc_sticky: true
 ---
 ## Context
 You are working on an Azure infrastructure that must implement private connectivity.

@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: posts
 classes: wide
 title: Articles
 permalink: /articles/
@@ -14,7 +14,3 @@ feature_row_1:
     btn_class: "btn--primary" 
 ---
 {% include feature_row id="feature_row_1" type="left" %}
-
-{% for post in site.posts limit: 5 %}
-  {% include archive-single.html %}
-{% endfor %}

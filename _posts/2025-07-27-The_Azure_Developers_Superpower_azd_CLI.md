@@ -7,6 +7,7 @@ tags: [azd CLI, Azure SDK, .NET Development, Meetup, Azure Meetup Casteddu, Spee
 toc: true
 toc_label: "The Azure Developer's Superpower: azd CLI"
 toc_icon: "book"
+toc_sticky: true
 ---
 After a somewhat lengthy pause, it was time to update my blog. 
 
