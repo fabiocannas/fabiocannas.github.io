@@ -7,7 +7,7 @@ permalink: "/2025/08/31/nuget-issue-with-dotnet-restore-on-net8-and-multi-nuget-
 category: [Devops]
 tags: [dotnet, CICD pipelines, Development, .NET, .NET 8, Nuget, Devops, Azure Devops]
 toc: true
-toc_label: "Dotnet 8 Issue With Dotnet Restore And Multi Nuget Source Configured"
+toc_label: "NuGet Issue With Dotnet Restore On .NET 8 And Multi Nuget Source Configured"
 toc_icon: "book"
 ---
 For some time now, an issue has been identified in NuGet that affects developers using multiple NuGet package sources in .NET 8 projects, particularly when one or more sources require authentication. The issue manifests as authentication failures during dotnet restore operations.
