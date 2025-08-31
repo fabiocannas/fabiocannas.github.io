@@ -7,6 +7,7 @@ tags: [Azure Application Gateway, FinOps]
 toc: true
 toc_label: "Stopping Azure Application Gateway to save costs: a quick win for your Azure bill"
 toc_icon: "book"
+toc_sticky: true
 ---
 ![Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/media/application-gateway-url-route-overview/figure1-720.png)
 
