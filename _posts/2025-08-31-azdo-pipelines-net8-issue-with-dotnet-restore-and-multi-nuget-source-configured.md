@@ -37,7 +37,7 @@ Couple of workarounds have been identified that successfully resolve the issue:
 
 - Using VSS_NUGET_EXTERNAL_FEED_ENDPOINTS environment variable for DotNetCoreCLI@2 task in Azure Devops Pipelines.
 
-I chose the second solution, because I wasn't very confident in updating the Azure artifact credential provider on my customer (a big one) self-hosted Azure Devops Agent.
+I chose the second solution, because I wasn't very confident in updating the Azure artifact credential provider on my customer (a big one) self-hosted Azure Devops Agent, used daily by all development teams of that company.
 
 ## Using VSS_NUGET_EXTERNAL_FEED_ENDPOINTS environment variable for DotNetCoreCLI@2 task in Azure Devops Pipelines
 Here is how to use the VSS_NUGET_EXTERNAL_FEED_ENDPOINTS environment variable in DotNetCoreCLI@2 task.
