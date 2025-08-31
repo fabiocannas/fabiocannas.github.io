@@ -27,7 +27,7 @@ When running dotnet restore in .NET 8 with multiple configured NuGet sources, de
 > C:\Program Files\dotnet\sdk\8.0.100\NuGet.targets(156,5): error : Unable to load the service index for source https://[...]/nuget/v3/index.json. 
 > C:\Program Files\dotnet\sdk\8.0.100\NuGet.targets(156,5): error : Response status code does not indicate success: 401 (Unauthorized). 
 
-I myself have encountered this issue on some customer Azure Devops pipelines and by force of things I ended up on the NuGet [Github issue 13129](https://github.com/NuGet/Home/issues/13129).
+I myself have encountered this issue on some customer Azure Devops pipelines and, by force of circumstances, I ended up on the NuGet [Github issue 13129](https://github.com/NuGet/Home/issues/13129).
 
 ## Workarounds
 
@@ -37,7 +37,7 @@ Couple of workarounds have been identified that successfully resolve the issue:
 
 - Using VSS_NUGET_EXTERNAL_FEED_ENDPOINTS environment variable for DotNetCoreCLI@2 task in Azure Devops Pipelines.
 
-I chose the second solution, because I wasn't very confident in updating the Azure artifact credential provider on my customer (a big one) self-hosted Azure Devops Agent.
+I chose the second solution, because I wasn't very confident in updating the Azure artifact credential provider on my customer (a big one) self-hosted Azure Devops Agent, used daily by all development teams of that company.
 
 ## Using VSS_NUGET_EXTERNAL_FEED_ENDPOINTS environment variable for DotNetCoreCLI@2 task in Azure Devops Pipelines
 Here is how to use the VSS_NUGET_EXTERNAL_FEED_ENDPOINTS environment variable in DotNetCoreCLI@2 task.
@@ -61,8 +61,8 @@ Here is how to use the VSS_NUGET_EXTERNAL_FEED_ENDPOINTS environment variable in
 {"endpointCredentials": [{"endpoint":"http://example.index.json", "username":"optional", "password":"accesstoken"}]}
 ```
 
-As you can see from the example, this solution requires an Azure Devops [Personal Access Token](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows) with Packaging (Read) permission, to consume packages from the Azure Artifacts feed.
-
+As you can see from the example, this solution requires an Azure Devops [Personal Access Token](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).
+The PAT must have Packaging (Read) permission, to allow consuming packages from the Azure Artifacts feed.
 
 ## Important Note
 Normally, you should not use a PAT to access Azure Devops Artifact feeds in Azure Devops Pipelines.
