@@ -106,7 +106,7 @@ azd CLI provides best practice, developer-friendly commands that map to key stag
 - `azure.yaml` file - A configuration file that defines services and maps them to Azure resources
 
 ### Azure.yaml Overview
-The azure.yaml file describes the application and the Azure resource included in the azd template.
+The azure.yaml file describes the application and the Azure resources included in the azd template.
 
 ```yaml
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
@@ -152,6 +152,7 @@ services:
 ```
 
 As you can see from the [todo-csharp-sql](https://github.com/Azure-Samples/todo-csharp-sql) template's azure.yaml, the template includes two services:
+
 | App      | Azure resource | Service implementation language |
 | -------- | -------------- |---------------------------------|
 | web      | App Service    | JS                              |
