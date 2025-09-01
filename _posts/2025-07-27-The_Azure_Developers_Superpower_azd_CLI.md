@@ -220,6 +220,17 @@ Let's see the command in action:
    - Release (read, write, execute, and manage)
    - Service Connections (read, query, and manage)
 
+
+Behind the scenes, azd cli created:
+- a new Azure Devops Project;
+- a GIT repository for the project;
+- an Azure resource group
+- a managed identity on Azure, using Workload Identity Federation;
+- a service connection (with workload identity federation) on Azure Devops, using the managed identity created previously;
+- the CI/CD pipeline using the provided pipeline definition (azd-dev.yaml);
+- pipeline variables and secrets. *IMPORTANT: secrets are stored in Azure Key vault*;
+- Key vault read access role assignment for the managed identity, so it can retrieve secrets during pipeline execution.
+
 Impressive, right? :)
 
 It would have taken me longer to do the same things without azd cli.
@@ -249,9 +260,19 @@ Configure in azure.yaml file with OS-specific support (Windows or Posix).
 azd config set alpha.compose on
 ```
 
-- `azd add` command creates resources without manual IAC templates
-- Infrastructure state is tracked in-memory
-- `azd infra gen` or `azd infra synth`  converts state to Bicep files
+I find this command very useful, even though the set of available resources is still limited, because I can create projects from scratch and have a well-set up IAC starter template, in a short time.
+
+### azd add
+`azd add` command creates resources without manual IAC templates.
+Infrastructure state is tracked in-memory.
+{% raw %}<img src="/assets/images/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_compose_1.jpg" alt="2025-07-27-The_Azure_Developers_Superpower_azd_compose_1">{% endraw %}
+
+{% raw %}<img src="/assets/images/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_compose_2.jpg" alt="2025-07-27-The_Azure_Developers_Superpower_azd_compose_2">{% endraw %}
+
+### azd infra gen
+`azd infra gen` or `azd infra synth` converts state to Bicep files.
+
+{% raw %}<img src="/assets/images/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_compose_3.jpg" alt="2025-07-27-The_Azure_Developers_Superpower_azd_compose_3.jpg">{% endraw %}
 
 ## azd CLI Extensions (alpha)
 
