@@ -259,6 +259,9 @@ Configure in azure.yaml file with OS-specific support (Windows or Posix).
 ```bash
 azd config set alpha.compose on
 ```
+
+I find this command very useful, even though the set of available resources is still limited, because I can create projects from scratch and have a well-set up IAC starter template, in a short time.
+
 ### azd add
 `azd add` command creates resources without manual IAC templates.
 Infrastructure state is tracked in-memory.
