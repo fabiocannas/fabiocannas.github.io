@@ -185,7 +185,7 @@ azd monitor --live
 ## CI/CD Pipeline Support
 
 ### Pipeline Configuration
-The `azd pipeline config` command automates provisioning and deployment using pipeline definition files included in azd templates.
+The `azd pipeline config` command automates provisioning and deployment of CI/CD pipelines using pipeline definition files included in azd templates.
 
 Supports:
 - Azure Pipelines
@@ -203,6 +203,27 @@ Supports:
 7. Set pipeline variables and secrets
 8. Commit and push changes
 9. Trigger pipeline runs
+
+### azd pipeline config demo
+Let's see the command in action:
+
+{% raw %}<img src="/assets/images/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_pipeline_config_1.jpg" alt="2025-07-27-The_Azure_Developers_Superpower_azd_pipeline_config_1">{% endraw %}
+
+{% raw %}<img src="/assets/images/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_pipeline_config_2.jpg" alt="2025-07-27-The_Azure_Developers_Superpower_azd_pipeline_config_2">{% endraw %}
+
+> Note: As you can see from the first screenshot, I chose Azure Devops provider, so i used a [PAT](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).
+>The PAT must have the following scopes:
+   - Agent Pools (read, manage)
+   - Build (read and execute)
+   - Code (full)
+   - Project and team (read, write, and manage)
+   - Release (read, write, execute, and manage)
+   - Service Connections (read, query, and manage)
+
+Impressive, right? :)
+
+It would have taken me longer to do the same things without azd cli.
+
 
 ## Event Hooks
 

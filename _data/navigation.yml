@@ -1,11 +1,11 @@
 # main links
 main:
+  - title: "Articles"
+    url: /articles/
   - title: "Categories"
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "Articles"
-    url: /articles/
   - title: "Public Speaking"
     url: /public-speaking/
   - title: "About"
