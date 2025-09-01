@@ -105,6 +105,65 @@ azd CLI provides best practice, developer-friendly commands that map to key stag
 - `src` folder - Contains all of the deployable app source code
 - `azure.yaml` file - A configuration file that defines services and maps them to Azure resources
 
+### Azure.yaml Overview
+The azure.yaml file describes the application and the Azure resource included in the azd template.
+
+```yaml
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: todo-csharp-sql
+metadata:
+  template: todo-csharp-sql@0.0.1-beta
+workflows:
+  up: 
+    steps:
+      - azd: provision
+      - azd: deploy --all
+services:
+  web:
+    project: ./src/web
+    dist: dist
+    language: js
+    host: appservice
+    hooks:
+      # Creates a temporary `.env.local` file for the build command. Vite will automatically use it during build.
+      # The expected/required values are mapped to the infrastructure outputs.
+      # .env.local is ignored by git, so it will not be committed if, for any reason, if deployment fails.
+      # see: https://vitejs.dev/guide/env-and-mode
+      # Note: Notice that dotenv must be a project dependency for this to work. See package.json.
+      prepackage:
+        windows:
+          shell: pwsh
+          run: 'echo "VITE_API_BASE_URL=""$env:API_BASE_URL""" > .env.local ; echo "VITE_APPLICATIONINSIGHTS_CONNECTION_STRING=""$env:APPLICATIONINSIGHTS_CONNECTION_STRING""" >> .env.local'
+        posix:
+          shell: sh
+          run: 'echo VITE_API_BASE_URL=\"$API_BASE_URL\" > .env.local && echo VITE_APPLICATIONINSIGHTS_CONNECTION_STRING=\"$APPLICATIONINSIGHTS_CONNECTION_STRING\" >> .env.local'    
+      postdeploy:
+        windows:
+          shell: pwsh
+          run: 'rm .env.local'
+        posix:
+          shell: sh
+          run: 'rm .env.local'
+  api:
+    project: ./src/api
+    language: csharp
+    host: appservice
+```
+
+As you can see from the [todo-csharp-sql](https://github.com/Azure-Samples/todo-csharp-sql) template's azure.yaml, the template includes two services:
+| App      | Azure resource | Service implementation language |
+| -------- | -------------- |---------------------------------|
+| web      | App Service    | JS                              |
+| api      | App Service    | C#                              |
+
+### How azd Maps IaC templates and application source code to service in azure.yaml
+For what concerns IaC templates, the CLI assumes the IaC module name is the same as the service name, otherwise the module path (relative to the root infra folder) can be specified using the *module* property at the single service level.
+
+The path to the service source code is specified through the service *project* property.
+
+For further information, here is the link to <a href="https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/azd-schema" target="_blank">azure.yaml schema</a>.
+
 ## Workflows
 
 ### azd init workflows
