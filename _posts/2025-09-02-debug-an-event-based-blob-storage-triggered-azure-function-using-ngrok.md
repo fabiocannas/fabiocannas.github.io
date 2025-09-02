@@ -57,14 +57,14 @@ In your Event Grid System Topic, create an event subscription with the following
 
 {% raw %}<img src="/assets/images/2025-09-02-Debug_An_Event_Based_Blob_Storage_Triggered_Azure_Function_Using_ngrok/eventgrid-event-subscription.jpg" alt="eventgrid-event-subscription">{% endraw %}
 
-> IMPORTANT: You have to start your Azure Function locally in debug mode to create the event subscription.
+> IMPORTANT: You have to start your Azure Function locally to create the event subscription.
 
 If the event subscription creation has been completed successfully, you will see a 200 status code in ngrok output:
 
 {% raw %}<img src="/assets/images/2025-09-02-Debug_An_Event_Based_Blob_Storage_Triggered_Azure_Function_Using_ngrok/event-subscription-created.jpg" alt="event-subscription-created">{% endraw %}
 
 ## Start Debugging
-Now that you have the event subscription in place and the Azure Function running locally in debug mode, you can finally debug your application.
+Now that you have the event subscription in place, you can finally debug your application.
 
 Use the Azure Resources extension in Visual Studio Code to upload files to the blob container and debug the blob triggered function.
 
