@@ -17,15 +17,15 @@ As you continue reading this post, you will see that it is actually very simple.
 
 ## Prerequisites
 - Visual Studio Code with Azure Resources extension;
-- <a href="https://learn.microsoft.com/en-us/azure/azure-functions/functions-event-grid-blob-trigger?pivots=programming-language-csharp" target="_blank">A Blob triggered function</a>;
+- <a href="https://learn.microsoft.com/en-us/azure/azure-functions/functions-event-grid-blob-trigger?pivots=programming-language-csharp" target="_blank" rel="noopener noreferrer">A Blob triggered function</a>;
 - An Azure Storage Account with a Blob container;
 - An Event Grid system topic of type "Microsoft.Storage.StorageAccounts" with your storage account as source;
-- A <a href="https://ngrok.com/docs/getting-started/" target="_blank">ngrok account</a> and a ngrok auth token;
+- A <a href="https://ngrok.com/docs/getting-started/" target="_blank" rel="noopener noreferrer">ngrok account</a> and a ngrok auth token;
 
 ## Why Use ngrok?
 ngrok is needed to expose your locally running Azure Function to the public, so it can be triggered by Azure Event Grid webhooks event handlers.
 
-**IMPORTANT:** there is already a very detailed tutorial on <a href="https://learn.microsoft.com/en-us/azure/azure-functions/functions-event-grid-blob-trigger?pivots=programming-language-csharp" target="_blank">Microsoft Learn</a> about this topic.
+**IMPORTANT:** there is already a very detailed tutorial on <a href="https://learn.microsoft.com/en-us/azure/azure-functions/functions-event-grid-blob-trigger?pivots=programming-language-csharp" target="_blank" rel="noopener noreferrer">Microsoft Learn</a> about this topic.
  As you can see in the official tutorial, you should use Azurite to emulate Azure Storage services when runnig locally.
  In my case, I had to attach to a real Azure Storage Account to debug an Azure Function that is triggered by blobs created by a third party service.
 I wanted to make this point because exposing development resources publicly is considered an unsafe practice.
