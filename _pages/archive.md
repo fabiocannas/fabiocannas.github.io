@@ -8,7 +8,7 @@ feature_row_1:
   - image_path: "/assets/images/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_CLI_intro_slide.jpg"
     alt: "2025-07-27-fabio-cannas-the-azure-developers-superpower-azd-cli"
     title: "The Azure Developer's Superpower: azd CLI"
-    excerpt: "Following is the content of my session at the Azure Meetup Casteddu, held a few days ago at Sa Manifattura, Cagliari."
+    excerpt: "Following is the content of my session at the Azure Meetup Casteddu, held on July 23, 2025, at Sa Manifattura, Cagliari."
     url: "/2025/07/27/The_Azure_Developers_Superpower_azd_CLI.html/"
     btn_label: "Read more"
     btn_class: "btn--primary" 
