@@ -26,7 +26,6 @@ To stay updated about Azure Meetup Casteddu events, I invite you to join the com
 # Azure Developer CLI (azd)
 
 ## The common Azure Development Challenges
-
 Have you ever spent more time configuring Azure deployments than actually writing code?
 
 Well, it happened to me, specially when I was learning Azure.
@@ -40,18 +39,14 @@ Before diving into this article, try to answer the following questions:
 
 ## The Problems We All Face
 
-### Infrastructure Setup Complexity
-- Deep knowledge of Azure services is required
-
-### Time spent on DevOps/Platform engineering instead of development 
-- Deployment pipeline + IAC headaches
-
-### Environment consistency issues
+- Infrastructure Setup Complexity: Deep knowledge of Azure services is required;
+- Time spent on DevOps/Platform engineering instead of development;
+- Deployment pipeline + IAC headaches;
+- Environment consistency issues.
 
 All of these are factors that can slow down development and increase the risk of errors.
 
 ## The Solution: Azure Developer CLI
-
 An open-source tool that accelerates provisioning and deploying app resources on Azure.
 azd CLI provides best practice, developer-friendly commands that map to key stages in development workflows.
 
@@ -207,27 +202,38 @@ azd down
 
 Below you will see the commands in action:
 
-### azd auth login - Let's authenticate to Azure
+### azd auth login
+Let's authenticate to Azure:
 ![plot](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_posts/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_CLI_azd_auth_login.jpg?raw=true) 
 
-### azd init - Let's download a template and then initialize the workspace
+### azd init
+Let's download a template and then initialize the workspace:
 ![plot](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_posts/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_CLI_azd_init.jpg?raw=true)
 
-### azd init - Let's take a look to the .azure folder
+Let's take a look to the .azure folder:
 ![plot](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_posts/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_CLI_azd_init_dotazure_folder.jpg?raw=true)
 
-### azd up - This is my favorite command. Hold on tight! haha
+As I wrote before, this folder contains the environment configuration. 
+In this case, only one environment has been created, "demo", but multiple environments can be created.
+
+### azd up
+This is my favorite command. Hold on tight!
 ![plot](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_posts/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_CLI_azd_up_1.jpg?raw=true)
 
 ![plot](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_posts/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_CLI_azd_up_2.jpg?raw=true)
 
-### azd show - Let's have a look at the apps that we just published
+> With a single command we created the infrastructure and deployed the applications.
+
+### azd show
+Let's have a look at the apps that we just published:
 ![plot](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_posts/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_CLI_azd_show.jpg?raw=true)
 
-### azd deploy - Let's publish changes to the webapp
+### azd deploy
+Let's publish changes to the webapp:
 ![plot](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_posts/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_CLI_azd_deploy.jpg?raw=true)
 
-### azd monitor - Finally, we can monitor our application 
+### azd monitor
+Finally, we can monitor our application: 
 ![plot](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_posts/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_CLI_azd_monitor.jpg?raw=true)
 
 ![plot](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_posts/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_CLI_azd_monitor_az_portal_dashboard.jpg?raw=true)
@@ -239,6 +245,7 @@ azd monitor --live
 ```
 
 ### azd down
+Here is how to cleanup Azure resources: 
 ![plot](https://github.com/fabiocannas/fabiocannas.github.io/blob/main/_posts/2025-07-27-The_Azure_Developers_Superpower_azd_CLI/2025-07-27-The_Azure_Developers_Superpower_azd_CLI_azd_down.jpg?raw=true)
 
 
@@ -252,15 +259,15 @@ Supports:
 - Github Actions
 
 ### Configuration Steps
-1. Authenticate with Azure
-2. Select CI/CD platform
-3. Configure repository
-4. Set up service principal
-5. Configure authentication:
+1. Authentication with Azure
+2. CI/CD platform selection
+3. Repository configuration
+4. Setup of the service principal
+5. Setup of the authentication:
    - GitHub: OpenID Connect (OIDC) or client credentials
    - Azure Pipelines: Workload identity federation (OIDC) or client credentials
-6. Provision pipeline files
-7. Set pipeline variables and secrets
+6. Provisioning of the pipeline files
+7. Creation of pipeline variables and secrets
 8. Commit and push changes
 9. Trigger pipeline runs
 
@@ -295,11 +302,9 @@ Impressive, right? :)
 
 It would have taken me longer to do the same things without azd cli.
 
-
 ## Event Hooks
-
 Hooks can execute custom scripts before and after azd commands or service lifecycle events.
-Configure in azure.yaml file with OS-specific support (Windows or Posix).
+They are configured in azure.yaml file with OS-specific support (Windows or Posix).
 
 ### Command Hooks
 - prerestore and postrestore
