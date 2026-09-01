@@ -15,6 +15,12 @@ I am Fabio Cannas.
 I am an Azure cloud enthusiast and I work at an Italian consulting company called Alveo Expertise.
 I am one the administrators of the <a href="https://www.azuremeetupcasteddu.it" target="_blank">Azure Meetup Casteddu</a>.
 
+
+I am a Microsoft MVP in the following two categories:
+
+- Azure Operations & Management;
+- Azure Application PaaS.
+
 I’ve been participating in software development projects involving Microsoft technologies for almost a decade.
 
 I began my career by doing full-stack software development.
