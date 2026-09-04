@@ -118,7 +118,7 @@ analytics:
 author:
   name             : "Fabio Cannas"
   avatar           : "/assets/images/FabioCannas.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Cloud Engineer - Microsoft Azure Enthusiast - admin @Azure Meetup Casteddu - Speaker"
+  bio              : "Microsoft MVP - Cloud Engineer - Microsoft Azure Enthusiast - admin @Azure Meetup Casteddu - Speaker"
   location         : "Sardinia, Italy"
   email            : # email
   links:
