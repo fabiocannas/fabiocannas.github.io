@@ -32,6 +32,7 @@ I hold the following certifications:
 - Microsoft Certified: Azure Solution Architect Expert
 - Microsoft Certified: DevOps Engineer Expert
 - Microsoft Certified: Azure Network Engineer Associate
+- Microsoft Certified: Cloud and AI Security Engineer Associate
 - Microsoft Certified: Azure Developer Associate
 - Microsoft Certified: Fabric Analytics Engineer Associate
 - Microsoft Certified Solutions Associate: Web applications
